@@ -1,6 +1,6 @@
 def prime_checker(number):
     result = []
-    for i in range(2,101):
+    for i in range(2,number):
         result.append(number % i)
     
     #print(result)
