@@ -1,16 +1,13 @@
-def prime_checker(number):
+def is_prime(number):
+    number = int(number)
     result = []
-    for i in range(2,number):
+    for i in range(2,number + 1):
         result.append(number % i)
-    
-    #print(result)
-    number_zeros = result.count(0)
-
+        number_zeros = result.count(0)
+        
     if number_zeros > 1 or number == 1:
-        print("It's not a prime")
+        return False
     else:
-        print("It's a prime")
-
-#Do NOT change any of the code below👇
-n = int(input()) # Check this number
-prime_checker(number=n)
+        return True
+    
+print(is_prime(75))
